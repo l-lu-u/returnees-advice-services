@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* Variables */
+:root {
+    /* Font Family */
+    --global--font-primary: 'Roboto', sans-serif;
+
+    /* Font Size */
+    --global--font-size-h1: 3.6rem;
+    --global--font-size-h2: 2.4rem;
+    --global--font-size-h3: 1.8rem;
+    --global--font-size-p: 1.4rem;
+    --global--letter-spacing: normal;
+
+    /* Font Weight */
+    --global--font-weight-regular: 400;
+    --global--font-weight-emphasis: 700;
+    
+    /* Line Height */
+	--global--line-height-body: 1.7;
+	--global--line-height-heading: 1.3;
+    --global--line-height-page-title: 1.1;
+    
+    /* Spacing & Sizing */
+    --global--spacing-primary: 2rem;
+    --global--spacing-secondary: 1rem;
+    --global--sizing-icon: 2.4rem;
+
+    /* Colors */
+    --global--color-primary--600: #0053AD;
+    --global--color-primary--500: #628CCC;
+    --global--color-primary--400: #D4DAF2;
+    --global--color-secondary--600: #219653;
+    --global--color-secondary--500: #27AE60;
+    --global--color-secondary--400: #6FCF97;
+    --global--color-ink--600: #333333;
+    --global--color-ink--500: #4F4F4F;
+    --global--color-ink--400: #828282;
+    --global--color-ink--300: #BDBDBD;
+    --global--color-ink--200: #E0E0E0;
+    --global--color-ink--100: #F2F2F2;
+    --global--color-on-dark: #FFFFFF;
+}
+
+/* Container */
+
+html { font-size: 10px; }
+body {
+    font-size: var(--global--font-size-p);
+    font-family: var(--global--font-primary);
+    font-weight: var(--global--font-weight-regular);
+}
+.content {
+    margin: var(--global--spacing-primary);
+}
+
+/* Typography */
+h1, .h1 {
+    font-size: var(--global--font-size-h1);
+    font-weight: var(--global--font-weight-emphasis);
+}
+
+h2, .h2 {
+    font-size: var(--global--font-size-h2);
+    font-weight: var(--global--font-weight-emphasis);
+}
+h3, .h3 {
+    font-size: var(--global--font-size-h3);
+    font-weight: var(--global--font-weight-emphasis);
+}
+.highlight {
+    font-weight: var(--global--font-weight-emphasis);
+}
+.link {
+    color: var(--global--color-primary--600);
+    text-decoration: underline;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    color: var(--global--color-on-dark);
+    text-decoration: none;
+}
+.button._primary {
+    padding: var(--global--spacing-primary);
+    background: var(--global--color-primary--600);
+    border-radius: var(--global--spacing-primary);
+}
+.button._secondary {
+    padding: var(--global--spacing-secondary) var(--global--spacing-primary);
+    background: var(--global--color-ink--600);
+    border-radius: var(--global--spacing-primary);
+}
+
+/* Top Navigation */
+.topnav {
+    background: var(--global--color-ink--600);
+    color: var(--global--color-white);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--global--spacing-primary);
+    position: sticky;
+    top: 0;
+}
+.topnav a {
+    color: var(--global--color-on-dark);
+}
+
+/* List */
+.content-list {
+    list-style: none;
+    padding-inline-start: 0;
+}
+.service-link {
+    margin-bottom: var(--global--spacing-primary);
+}
+.service-link a{
+    display: flex;
+    text-decoration: none;
+    color: var(--global--color-ink--600);
+    font-weight: var(--global--font-weight-emphasis);
+    padding: var(--global--spacing-primary);
+    background: var(--global--color-primary--400);
+}
+
+/* Accordion */
+.accordion {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+button.accordion-tab {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--global--spacing-primary);
+    cursor: pointer;
+    margin-bottom: 0;
+    border: 1px var(--global--color-primary--400);
+    border-style: solid none;
+    font-weight: var(--global--font-weight-emphasis);
+}
+div.accordion-panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 var(--global--spacing-primary);
+    background: var(--global--color-ink--100);
+    border-left: 3px solid var(--global--color-primary--600);
+}
+/* Tab not active, plus icon */
+button.accordion-tab:after {
+    content: '\002B';
+    color: var(--global--color-primary--600);
+    font-weight: var(--global--font-weight-emphasis);
+    font-size: var(--global--sizing-icon);
+}
+/* Tab active, minus icon */
+button.accordion-tab.active:after {
+    content: "\2212";
+}
