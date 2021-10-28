@@ -15,10 +15,25 @@
                 <span class="material-icons">menu</span>
             </a>
             <a class="topnav-logo" href="index.html"></a>
-            <a class="topnav-icon">
+            <a class="topnav-icon" onclick="openSearch();">
                 <span class="material-icons">search</span>
             </a>
         </nav>
+        <div id="overlay-search" class="overlay">
+            <a aria-label="close-search" class="overlay-icon _close">
+                <span class="material-icons" onclick="closeSearch();" title="Close Overlay">close</span>
+            </a>
+            <div class="overlay-content">
+                <h2>How can we help you?</h2>
+              <form class="search-form">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="button" class="search-button" onclick="displayResults();">
+                    <span class="material-icons">search</span>
+                </button>
+              </form>
+              <ul id="search-results" class="search-list"></ul>
+            </div>
+          </div>
         <header class="header">
             <img src="img/illustration.png" alt="People sitting on grass" >
             <svg id="wave" viewBox="0 0 375 95" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +49,9 @@
             <div class="content-section">
                 <h2>Checklist for your return plans</h2>
                 <div class="accordion">
-                    <button class="accordion-tab">Prepare your documents</button>
+                    <a class="accordion-tab" name="documents">
+                        <span class="accordion-label highlight">Prepare your documents</span>
+                    </a>
                     <div class="accordion-panel">
                         <p class="highlight">
                             When moving to a new contry there are a lot of 
@@ -94,7 +111,9 @@
                             </ul>
                         </p>
                     </div>
-                    <button class="accordion-tab">Learn about healthcare support</button>
+                    <a class="accordion-tab" name="healthcare">
+                        <span class="accordion-label highlight">Learn about healthcare support</span>
+                    </a>
                     <div class="accordion-panel">
                         <p class="highlight">
                             Healthcare is offered by municipalities, both privately and publicly. 
@@ -115,7 +134,9 @@
                             </ul>
                         </p>
                     </div>
-                    <button class="accordion-tab">Find your accommodation</button>
+                    <a class="accordion-tab" name="accommodation">
+                        <span class="accordion-label highlight">Find your accommodation</span>
+                    </a>
                     <div class="accordion-panel">
                         <p class="highlight">
                             Finding a suitable home can be a challenging task. We recommend 
@@ -140,7 +161,9 @@
                             </ul>
                         </p>
                     </div>
-                    <button class="accordion-tab">Finance your living</button>
+                    <a class="accordion-tab" name="finance">
+                        <span class="accordion-label highlight">Finance your living</span>
+                    </a>
                     <div class="accordion-panel">
                         <p class="highlight">
                             In many cases, secure means of support are a requirement for 
@@ -182,7 +205,9 @@
                             </ul>
                         </p>
                     </div>
-                    <button class="accordion-tab">For job seekers</button>
+                    <a class="accordion-tab" name="job-seekers">
+                        <span class="accordion-label highlight">For job seekers</span>
+                    </a>
                     <div class="accordion-panel">
                         <p class="highlight">
                             International work experience is valuable. Suomi-Seura aims to 
@@ -263,19 +288,27 @@
                             </ul>
                         </p>
                     </div>
-                    <button class="accordion-tab">For students</button>
+                    <a class="accordion-tab" name="students">
+                        <span class="accordion-label highlight">For students</span>
+                    </a>
                     <div class="accordion-panel">
                         <p>(Content under development)</p>
                     </div>
-                    <button class="accordion-tab">For retirees</button>
+                    <a class="accordion-tab" name="retirees">
+                        <span class="accordion-label highlight">For retirees</span>
+                    </a>
                     <div class="accordion-panel">
                         <p>(Content under development)</p>
                     </div>
-                    <button class="accordion-tab">For entrepreneurs</button>
+                    <a class="accordion-tab" name="entrepreneurs">
+                        <span class="accordion-label highlight">For entrepreneurs</span>
+                    </a>
                     <div class="accordion-panel">
                         <p>(Content under development)</p>
                     </div>
-                    <button class="accordion-tab">Settle in the new environment</button>
+                    <a class="accordion-tab" name="settle">
+                        <span class="accordion-label highlight">Settle in the new environment</span>
+                    </a>
                     <div class="accordion-panel">
                         <p class="highlight">
                             The logistics of moving possessions from one contry to another 
@@ -303,7 +336,9 @@
                             </ul>
                         </p>
                     </div>
-                    <button class="accordion-tab">Feel at home</button>
+                    <a class="accordion-tab" name="home">
+                        <span class="accordion-label highlight">Feel at home</span>
+                    </a>
                     <div class="accordion-panel">
                         <p class="highlight">
                             The final step of moving is to feel at home in your new house 
