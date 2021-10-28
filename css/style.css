@@ -25,6 +25,7 @@
     --global--spacing-primary: 2rem;
     --global--spacing-secondary: 1rem;
     --global--sizing-icon: 2.4rem;
+    --global--border-radius: 3.6rem;
 
     /* Colors */
     --global--color-primary--600: #0053AD;
@@ -81,11 +82,12 @@ h3, .h3 {
     display: inline-block;
     color: var(--global--color-on-dark);
     text-decoration: none;
+    border: none;
 }
 .button._primary {
     padding: var(--global--spacing-primary);
     background: var(--global--color-primary--600);
-    border-radius: var(--global--spacing-primary);
+    border-radius: var(--global--border-radius);
 }
 .button._secondary {
     padding: var(--global--spacing-secondary) var(--global--spacing-primary);
@@ -99,12 +101,42 @@ h3, .h3 {
     color: var(--global--color-white);
     display: flex;
     justify-content: space-between;
-    padding: var(--global--spacing-primary);
+    padding: var(--global--spacing-secondary) var(--global--spacing-primary);
     position: sticky;
     top: 0;
+    z-index: 1000;
+    align-items: center;
 }
 .topnav a {
     color: var(--global--color-on-dark);
+}
+
+.topnav-icon .material-icons {
+    font-size: 3.6rem;
+}
+
+.topnav-logo {
+    background: url("../img/logo.png") no-repeat center;
+    width: 180px;
+    height: 30px;
+    background-size: cover;
+}
+
+/* Header Area */
+.header {
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+.header>img {
+    width: 100%;
+}
+#wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /* List */
@@ -122,6 +154,12 @@ h3, .h3 {
     font-weight: var(--global--font-weight-emphasis);
     padding: var(--global--spacing-primary);
     background: var(--global--color-primary--400);
+    justify-content: space-between;
+    align-items: center;
+}
+.service-link a::after{
+    content:"\203A";
+    font-size: 3.6rem;
 }
 
 /* Accordion */
@@ -160,4 +198,22 @@ button.accordion-tab:after {
 /* Tab active, minus icon */
 button.accordion-tab.active:after {
     content: "\2212";
+}
+
+/* Contact */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin-bottom: var(--global--spacing-secondary);
+}
+.contact-form input[type=text], 
+.contact-form input[type=email], 
+.contact-form textarea {
+    box-sizing: border-box;
+    background: var(--global--color-ink--200);
+    padding: var(--global--spacing-primary);
+    border: none;
+    margin-bottom: var(--global--spacing-primary);
 }

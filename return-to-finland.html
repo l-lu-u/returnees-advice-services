@@ -5,14 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <title>Suomi Seura - Return to Finland</title>
     </head>
     <body onload="manageAccordions();">
         <nav class="topnav">
-            <a aria-label="more" class="topnav-icon">Menu</a>
-            <a class="topnav-logo" href="index.html">Suomi Seura</a>
-            <a class="topnav-icon">Search</a>
+            <a aria-label="more" class="topnav-icon">
+                <span class="material-icons">menu</span>
+            </a>
+            <a class="topnav-logo" href="index.html"></a>
+            <a class="topnav-icon">
+                <span class="material-icons">search</span>
+            </a>
         </nav>
+        <header class="header">
+            <img src="img/illustration.png" alt="People sitting on grass" >
+            <svg id="wave" viewBox="0 0 375 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M121 63C70.8439 80.9805 0 84.0905 0 84.0905V95.0001H375V2.50007C375 2.50007 319.51 -2.93863 275.5 2.50053C224.6 8.79117 174 44 121 63Z" fill="white"/>
+            </svg>
+        </header>
         <div class="content">
             <div class="content-section">
                 <h1>Return to Finland</h1>
@@ -314,24 +326,22 @@
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="content-section">
                 <h2>Do you need more assistance?</h2>
                 <p>
                     If you can’t find what you need from the checklist above, 
                     contact us and our advisor is ready to help!
                 </p>
-                <form>
-                    <label for=""></label>
-                    <input type="" id="" name="" placeholder="">
+                <form class="contact-form">
+                    <label for="name" class="highlight">Name</label>
+                    <input type="text" id="name" name="name" placeholder="How shall we address you?" required>
 
-                    <label for=""></label>
-                    <input type="" id="" name="" placeholder="">
+                    <label for="email" class="highlight">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Example@email.com" required>
 
-                    <label for=""></label>
-                    <textarea id="" name="" placeholder="">
-
-                    </textarea>
-                    <input type="" value="Send message">
+                    <label for="message" class="highlight">Message</label>
+                    <textarea id="message" name="message" placeholder="Briefly tell us about your questions and your needs. How can we help you?"></textarea>
+                    <input class="button _primary" type="submit" value="Send message" >
                 </form>
             </div>
         </div>
