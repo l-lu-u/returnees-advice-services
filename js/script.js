@@ -108,7 +108,9 @@ function displayResults() {
 // Direct to the accordion anchor
 function directToAnchor(anchor) {
     document.getElementById("overlay-search").style.display = "none";
+
     let accordionTab = document.getElementsByName(anchor);
+    console.log(accordionTab);
     let panel = accordionTab[0].nextElementSibling;
     panel.style.maxHeight = panel.scrollHeight + "px";
     panel.classList.add("active");
