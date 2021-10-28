@@ -12,4 +12,5 @@ Note:
 - also, the auto-expanded accodion through search only works smoothly on "return-to-finland.html";
 - for future iterations, the event needs to be handled considering across pages; 
 
-https://github.com/ring03-cl/returnees-advice-services
+Link to repository: https://github.com/ring03-cl/returnees-advice-services
+Link to Figma prototype: https://www.figma.com/proto/DuYoeh5zV1PUoB5nAuFOOP/Prototype?page-id=0%3A1&node-id=212%3A2307&viewport=241%2C48%2C0.25&scaling=scale-down&starting-point-node-id=212%3A2307&show-proto-sidebar=1
