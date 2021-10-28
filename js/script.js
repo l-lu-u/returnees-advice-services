@@ -110,8 +110,6 @@ function directToAnchor(anchor) {
     document.getElementById("overlay-search").style.display = "none";
     let accordionTab = document.getElementsByName(anchor);
     let panel = accordionTab[0].nextElementSibling;
-    if (panel.style.maxHeight == null) {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-        panel.classList.add("active");
-    }
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    panel.classList.add("active");
 }

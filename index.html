@@ -16,10 +16,25 @@
                 <span class="material-icons">menu</span>
             </a>
             <a aria-label="home" class="topnav-logo"></a>
-            <a aria-label="search" class="topnav-icon">
+            <a aria-label="search" class="topnav-icon" onclick="openSearch();">
                 <span class="material-icons">search</span>
             </a>
         </nav>
+        <div id="overlay-search" class="overlay">
+            <a aria-label="close-search" class="overlay-icon _close">
+                <span class="material-icons" onclick="closeSearch();" title="Close Overlay">close</span>
+            </a>
+            <div class="overlay-content">
+                <h2>How can we help you?</h2>
+              <form class="search-form">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="button" class="search-button" onclick="displayResults();">
+                    <span class="material-icons">search</span>
+                </button>
+              </form>
+              <ul id="search-results" class="search-list"></ul>
+            </div>
+        </div>
         <header class="header">
             <img src="img/illustration.png" alt="People sitting on grass" >
             <svg id="wave" viewBox="0 0 375 95" fill="none" xmlns="http://www.w3.org/2000/svg">
