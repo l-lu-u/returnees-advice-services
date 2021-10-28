@@ -89,6 +89,9 @@ h3, .h3 {
     background: var(--global--color-primary--600);
     border-radius: var(--global--border-radius);
 }
+.button._primary:active {
+    background: var(--global--color-ink--600);
+}
 .button._secondary {
     padding: var(--global--spacing-secondary) var(--global--spacing-primary);
     background: var(--global--color-ink--600);
